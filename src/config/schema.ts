@@ -1,4 +1,4 @@
-import { SchemaConfig } from '../src/Middleware';
+import { SchemaConfig } from '../Library/Middleware';
 
 export const schema: SchemaConfig = {
   merge: true,
