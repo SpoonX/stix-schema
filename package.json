@@ -1,6 +1,6 @@
 {
   "name": "stix-schema",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A stix module that adds schema validation for your requests using joi.",
   "repository": {
     "type": "git",
