@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/SpoonX/stix-schema",
   "scripts": {
-    "build": "tsc --build tsconfig.json",
+    "build": "rm -rf dist && tsc --build tsconfig.json",
     "prepare": "yarn build",
     "version": "conventional-changelog -p angular -i doc/CHANGELOG.md -s && git add -A doc/CHANGELOG.md",
     "postpublish": "git push upstream master && git push upstream --tags"
