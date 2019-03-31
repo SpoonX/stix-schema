@@ -38,7 +38,7 @@ export class SchemaMiddleware extends AbstractMiddleware {
     if (rule.query) {
       debug(`handling schemas for "query".`);
 
-      const { error, value } = this.schemaService.validate(Object.assign({}, ctx.query), rule.query, rule.options);
+      const { error, value } = this.schemaService.validate(Object.assign({}, ctx.query), rule.query.schema, rule.options);
 
       if (error) {
         debug(`handling error for "query" schema.`);
@@ -52,7 +52,7 @@ export class SchemaMiddleware extends AbstractMiddleware {
     if (rule.body) {
       debug(`handling schemas for "body".`);
 
-      const { error, value } = this.schemaService.validate(Object.assign({}, ctx.request.body), rule.body, rule.options);
+      const { error, value } = this.schemaService.validate(Object.assign({}, ctx.request.body), rule.body.schema, rule.options);
 
       if (error) {
         debug(`handling error for "body" schema.`);

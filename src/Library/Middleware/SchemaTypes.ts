@@ -16,13 +16,15 @@ export interface SchemaRuleset {
 
 export interface SchemaRule {
   options?: SchemaRuleOptions;
-  body?: JoiSchema;
-  query?: JoiSchema;
+  body?: Schema;
+  query?: Schema;
 }
 
 export interface DataSource { [key: string]: any; }
 
-export type JoiSchema = Joi.AnySchema | { [property: string]: Joi.AnySchema; };
+export type Schema = { name: string, schema: JoiSchema };
+
+export type JoiSchema = Joi.AnySchema & { [property: string]: Joi.AnySchema; };
 
 export type ControllerReference = typeof AbstractActionController;
 

@@ -45,16 +45,21 @@ export const schema: SchemaConfig = {
 
 With this in place, every request that triggers `UserController.register` will be validated against the NewUser schema first.
 
-Example schema:
+### Example schema:
+
+A schema must export an object wit ha `name` and the `schema`.
 
 ```ts
 import Joi from 'joi';
 
-const schema = Joi.object().keys({
-  username: Joi.string().alphanum().min(3).max(30).required(),
-  password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/),
-  email: Joi.string().email({ minDomainAtoms: 2 })
-});
+export const NewUser = {
+  name: 'NewUser',
+  schema: Joi.object().keys({
+    username: Joi.string().alphanum().min(3).max(30).required(),
+    password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/),
+    email: Joi.string().email({ minDomainAtoms: 2 }),
+  }),
+};
 ```
 
 ### Using the params
