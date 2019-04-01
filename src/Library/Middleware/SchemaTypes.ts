@@ -24,7 +24,7 @@ export interface DataSource { [key: string]: any; }
 
 export type Schema = { name: string, schema: JoiSchema };
 
-export type JoiSchema = Joi.AnySchema & { [property: string]: Joi.AnySchema; };
+export type JoiSchema = Joi.SchemaMap | Joi.AnySchema;
 
 export type ControllerReference = typeof AbstractActionController;
 
