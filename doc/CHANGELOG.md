@@ -1,3 +1,7 @@
+## [1.0.3](https://github.com/SpoonX/stix-schema/compare/v1.0.2...v1.0.3) (2019-04-01)
+
+
+
 ## [1.0.2](https://github.com/SpoonX/stix-schema/compare/v1.0.1...v1.0.2) (2019-03-31)
 
 
