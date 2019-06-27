@@ -10,7 +10,7 @@ export class SchemaService {
   private responseService: ResponseService;
 
   public getSchemaRule (controller: typeof AbstractActionController, action: string): SchemaRule | null {
-    if (!this.config.schemas.has(controller.constructor as typeof AbstractActionController)) {
+    if (!this.config.schemas || !this.config.schemas.has(controller.constructor as typeof AbstractActionController)) {
       return null;
     }
 
