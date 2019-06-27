@@ -1,3 +1,12 @@
+## [1.0.4](https://github.com/SpoonX/stix-schema/compare/v1.0.3...v1.0.4) (2019-06-27)
+
+
+### Bug Fixes
+
+* **SchemaService:** check config before getting values ([1249a8f](https://github.com/SpoonX/stix-schema/commit/1249a8f))
+
+
+
 ## [1.0.3](https://github.com/SpoonX/stix-schema/compare/v1.0.2...v1.0.3) (2019-04-01)
 
 
